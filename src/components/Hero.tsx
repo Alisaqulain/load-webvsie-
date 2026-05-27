@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
 
           <div className="animate-fade-up animate-delay-200 relative hidden lg:block">
-            <div className="relative rounded-2xl border border-white/20 bg-navy-950/60 p-8 backdrop-blur-xl">
+            <div className="relative rounded-2xl border border-white/25 bg-navy-950/80 p-8 shadow-2xl shadow-black/35 backdrop-blur-xl">
               <div className="absolute -top-3 -right-3 rounded-lg border border-gold-500/40 bg-gold-500/20 px-4 py-2">
                 <p className="text-xs font-semibold text-gold-400">159+ Partners</p>
               </div>
@@ -97,9 +97,9 @@ export default function Hero() {
                   "Quick approval coordination",
                   "Zero service charges",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-silver-200">
-                    <FileCheck className="mt-0.5 h-5 w-5 shrink-0 text-gold-400" />
-                    <span className="text-sm">{item}</span>
+                  <li key={item} className="flex items-start gap-3 text-white">
+                    <FileCheck className="mt-0.5 h-5 w-5 shrink-0 text-gold-300" />
+                    <span className="text-sm font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -111,7 +111,7 @@ export default function Hero() {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p className="font-display text-2xl font-bold text-gold-400">{stat.value}</p>
-                    <p className="text-xs text-silver-400">{stat.label}</p>
+                    <p className="text-xs text-silver-300">{stat.label}</p>
                   </div>
                 ))}
               </div>
