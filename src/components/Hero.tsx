@@ -56,6 +56,12 @@ export default function Hero() {
                 Apply for Loan
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </Link>
+              <Link
+                href="/calculators"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:border-gold-500/40 hover:bg-white/10"
+              >
+                Loan Calculators
+              </Link>
               <a
                 href={phoneHref(PRIMARY_PHONE)}
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:border-gold-500/40 hover:bg-white/10"

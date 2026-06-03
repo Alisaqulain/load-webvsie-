@@ -7,6 +7,7 @@ import BusinessLoanSection from "@/components/BusinessLoanSection";
 import CustomerTrust from "@/components/CustomerTrust";
 import FAQ from "@/components/FAQ";
 import ContactCTA from "@/components/ContactCTA";
+import FinancialCalculatorsSection from "@/components/FinancialCalculatorsSection";
 import { LOAN_CATEGORIES } from "@/lib/data";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -57,6 +58,7 @@ export default function HomePage() {
       </section>
 
       <ProcessSection />
+      <FinancialCalculatorsSection />
       <BankTieups compact />
       <BusinessLoanSection />
       <CustomerTrust />

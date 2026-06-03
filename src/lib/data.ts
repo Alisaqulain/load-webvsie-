@@ -25,6 +25,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/loan-services", label: "Loan Services" },
+  { href: "/calculators", label: "Calculators" },
   { href: "/loan-details", label: "Loan Details" },
   { href: "/bank-tieups", label: "Bank Tie-ups" },
   { href: "/eligibility", label: "Eligibility" },

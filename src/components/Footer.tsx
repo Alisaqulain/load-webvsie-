@@ -46,7 +46,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white">Services</h4>
             <ul className="mt-4 space-y-2">
-              {NAV_LINKS.slice(1, 6).map((link) => (
+              {NAV_LINKS.slice(1, 7).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
