@@ -3,12 +3,15 @@ import PageHeader from "@/components/PageHeader";
 import CalculatorHub from "@/components/calculators/CalculatorHub";
 import ContactCTA from "@/components/ContactCTA";
 import { Calculator, TrendingUp, Users } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Loan Calculators | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Loan Calculators",
   description:
     "Free EMI calculator, home loan affordability calculator, and debt consolidation estimator. Get instant results and expert loan advice across India.",
-};
+  path: "/calculators",
+  keywords: ["EMI calculator", "home loan calculator", "debt consolidation calculator India"],
+});
 
 const benefits = [
   {

@@ -10,7 +10,8 @@ export default function FloatingCTA() {
         href={PRIMARY_WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed right-4 bottom-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-green-500/30 transition hover:scale-110 hover:brightness-110 md:right-6 md:bottom-6"
+        className="fixed right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-green-500/30 transition hover:scale-110 hover:brightness-110 md:right-6"
+        style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
         aria-label="WhatsApp Now"
         title="WhatsApp Now"
       >
@@ -19,7 +20,8 @@ export default function FloatingCTA() {
 
       <a
         href={phoneHref(PRIMARY_PHONE)}
-        className="fixed right-4 bottom-20 z-50 flex h-12 w-12 items-center justify-center rounded-full gradient-gold text-navy-950 shadow-xl md:hidden"
+        className="fixed right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full gradient-gold text-navy-950 shadow-xl md:hidden"
+        style={{ bottom: "calc(max(1rem, env(safe-area-inset-bottom)) + 4rem)" }}
         aria-label="Call for Free Consultation"
         title="Call for Free Consultation"
       >

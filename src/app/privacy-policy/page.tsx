@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import { SITE_NAME, PHONES, phoneHref } from "@/lib/data";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy",
   description:
     "Learn how NR Innovative Solutions collects, uses, and protects your personal information when you use our loan consultancy services.",
-};
+  path: "/privacy-policy",
+});
 
 const LAST_UPDATED = "June 29, 2025";
 

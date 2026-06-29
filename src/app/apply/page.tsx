@@ -4,12 +4,15 @@ import PageHeader from "@/components/PageHeader";
 import ApplyForm from "@/components/ApplyForm";
 import { Shield, Clock, Phone } from "lucide-react";
 import { PHONES, phoneHref } from "@/lib/data";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Apply Now | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Apply Now",
   description:
     "Apply for any loan type online. Free consultation, quick response, and expert guidance from NR Innovative Solutions.",
-};
+  path: "/apply",
+  keywords: ["apply for loan online", "loan application India", "free loan consultation"],
+});
 
 function FormFallback() {
   return (

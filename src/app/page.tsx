@@ -8,13 +8,16 @@ import CustomerTrust from "@/components/CustomerTrust";
 import FAQ from "@/components/FAQ";
 import ContactCTA from "@/components/ContactCTA";
 import FinancialCalculatorsSection from "@/components/FinancialCalculatorsSection";
-import { LOAN_CATEGORIES } from "@/lib/data";
+import JsonLd from "@/components/JsonLd";
+import { LOAN_CATEGORIES, FAQ_ITEMS } from "@/lib/data";
+import { faqJsonLd } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqJsonLd(FAQ_ITEMS)} />
       <Hero />
 
       <WhyChooseUs />
@@ -26,7 +29,7 @@ export default function HomePage() {
               <p className="text-sm font-semibold tracking-widest text-gold-600 uppercase">
                 Our Services
               </p>
-              <h2 className="font-display mt-3 text-3xl font-bold text-navy-900 sm:text-4xl">
+              <h2 className="font-display mt-3 text-2xl font-bold text-navy-900 sm:text-4xl">
                 Loan Categories
               </h2>
               <p className="mt-4 max-w-xl text-silver-500">

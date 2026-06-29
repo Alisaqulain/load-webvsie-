@@ -22,6 +22,13 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
@@ -30,15 +37,15 @@ export default function Navbar() {
           : "bg-navy-950/80 backdrop-blur-md"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex items-center">
-          <div className="overflow-hidden rounded-xl border border-gold-500/40 bg-white p-1 shadow-inner">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
+        <Link href="/" className="group flex min-w-0 shrink items-center">
+          <div className="overflow-hidden rounded-lg border border-gold-500/40 bg-white p-0.5 shadow-inner sm:rounded-xl sm:p-1">
             <Image
               src="/logo.jpeg"
               alt="NR Innovative Solutions Logo"
               width={180}
               height={56}
-              className="h-11 w-[140px] object-contain sm:w-[160px]"
+              className="h-8 w-[100px] object-contain sm:h-10 sm:w-[130px] lg:h-11 lg:w-[160px]"
               priority
             />
           </div>
@@ -65,8 +72,9 @@ export default function Navbar() {
             href={phoneHref(PRIMARY_PHONE)}
             className="flex items-center gap-1.5 text-sm text-silver-300 whitespace-nowrap transition-colors hover:text-gold-400"
           >
-            <Phone className="h-4 w-4" />
-            <span>+91 {PRIMARY_PHONE}</span>
+            <Phone className="h-4 w-4 shrink-0" />
+            <span className="hidden xl:inline">+91 {PRIMARY_PHONE}</span>
+            <span className="xl:hidden">Call</span>
           </a>
           <Link
             href="/apply"
@@ -79,16 +87,17 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="rounded-lg p-2 text-white xl:hidden"
-          aria-label="Toggle menu"
+          className="shrink-0 rounded-lg p-2 text-white lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy-950/98 backdrop-blur-xl xl:hidden">
-          <div className="mx-auto max-w-7xl space-y-1 px-4 py-4">
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/10 bg-navy-950/98 backdrop-blur-xl lg:hidden">
+          <div className="mx-auto max-w-7xl space-y-1 px-4 py-4 pb-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -102,6 +111,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href={phoneHref(PRIMARY_PHONE)}
+              className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-white/15 px-4 py-3 text-sm font-medium text-silver-200"
+            >
+              <Phone className="h-4 w-4 text-gold-400" />
+              Call +91 {PRIMARY_PHONE}
+            </a>
             <Link
               href="/apply"
               className="gradient-gold mt-3 block rounded-lg px-4 py-3 text-center text-sm font-semibold text-navy-950"

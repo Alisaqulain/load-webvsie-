@@ -3,12 +3,15 @@ import PageHeader from "@/components/PageHeader";
 import { PHONES, whatsappHref, phoneHref } from "@/lib/data";
 import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Us",
   description:
     "Contact NR Innovative Solutions for free loan consultation. Call or WhatsApp our advisors — pan India service.",
-};
+  path: "/contact",
+  keywords: ["contact loan advisor", "loan consultation India", "WhatsApp loan help"],
+});
 
 export default function ContactPage() {
   return (

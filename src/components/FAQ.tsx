@@ -28,9 +28,11 @@ export default function FAQ() {
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left"
+                className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left sm:px-6 sm:py-4"
               >
-                <span className="font-medium text-navy-900">{item.question}</span>
+                <span className="text-sm font-medium text-navy-900 sm:text-base">
+                  {item.question}
+                </span>
                 <ChevronDown
                   className={`h-5 w-5 shrink-0 text-gold-600 transition-transform ${
                     openIndex === index ? "rotate-180" : ""
@@ -38,7 +40,7 @@ export default function FAQ() {
                 />
               </button>
               {openIndex === index && (
-                <div className="border-t border-navy-800/8 px-6 pb-4">
+                <div className="border-t border-navy-800/8 px-4 pb-4 sm:px-6">
                   <p className="text-sm leading-relaxed text-silver-500">{item.answer}</p>
                 </div>
               )}

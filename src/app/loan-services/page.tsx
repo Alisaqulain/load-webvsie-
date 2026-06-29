@@ -5,12 +5,15 @@ import BusinessLoanSection from "@/components/BusinessLoanSection";
 import { SimpleLoanCard } from "@/components/LoanCard";
 import ContactCTA from "@/components/ContactCTA";
 import { LOAN_CATEGORIES, LOAN_TYPES } from "@/lib/data";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Loan Services | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Loan Services",
   description:
     "Explore all loan types — personal, business, housing, gold, vehicle, education, commercial, and industry-specific loans across India.",
-};
+  path: "/loan-services",
+  keywords: ["loan services India", "all types of loans", "business loan", "home loan"],
+});
 
 export default function LoanServicesPage() {
   return (

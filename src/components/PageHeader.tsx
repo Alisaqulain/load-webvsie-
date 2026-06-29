@@ -17,11 +17,11 @@ export default function PageHeader({ title, subtitle, breadcrumb }: PageHeaderPr
             {breadcrumb}
           </p>
         )}
-        <h1 className="font-display mt-2 text-4xl font-bold text-white drop-shadow-[0_3px_14px_rgba(0,0,0,0.6)] sm:text-5xl">
+        <h1 className="font-display mt-2 text-3xl font-bold text-white drop-shadow-[0_3px_14px_rgba(0,0,0,0.6)] sm:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-silver-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-silver-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] sm:text-lg">
             {subtitle}
           </p>
         )}

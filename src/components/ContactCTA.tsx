@@ -15,26 +15,26 @@ export default function ContactCTA() {
           Speak with our loan advisors today. Free consultation, zero service charges,
           and expert guidance from application to disbursement.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
           <a
             href={PRIMARY_WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:brightness-110"
+            className="mobile-full-btn inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-base font-semibold text-white shadow-lg transition hover:brightness-110 sm:px-8 sm:py-4"
           >
             <MessageCircle className="h-5 w-5" />
             WhatsApp Now
           </a>
           <a
             href={phoneHref(PRIMARY_PHONE)}
-            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:border-gold-500/40"
+            className="mobile-full-btn inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:border-gold-500/40 sm:px-8 sm:py-4"
           >
-            <Phone className="h-5 w-5 text-gold-400" />
+            <Phone className="h-5 w-5 shrink-0 text-gold-400" />
             Call for Free Consultation
           </a>
           <Link
             href="/apply"
-            className="gradient-gold inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-navy-950 shadow-lg transition hover:brightness-110"
+            className="gradient-gold mobile-full-btn inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-navy-950 shadow-lg transition hover:brightness-110 sm:px-8 sm:py-4"
           >
             <FileText className="h-5 w-5" />
             Apply for Loan

@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContactCTA from "@/components/ContactCTA";
 import { Target, Eye, Award, Users } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "About Us",
   description:
     "Learn about NR Innovative Solutions — India's trusted loan consultancy with 159+ bank tie-ups, zero service charges, and pan India support.",
-};
+  path: "/about",
+  keywords: [
+    "about NR Innovative Solutions",
+    "loan consultancy India",
+    "trusted loan advisor",
+  ],
+});
 
 const values = [
   {

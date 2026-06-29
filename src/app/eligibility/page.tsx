@@ -4,12 +4,15 @@ import PageHeader from "@/components/PageHeader";
 import ContactCTA from "@/components/ContactCTA";
 import { ELIGIBILITY_SECTIONS } from "@/lib/data";
 import { FileText, CheckCircle2 } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Eligibility & Documents | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Eligibility & Documents",
   description:
     "Check loan eligibility criteria and required documents for salaried, self-employed, home loans, and commercial loans in India.",
-};
+  path: "/eligibility",
+  keywords: ["loan eligibility India", "loan documents required", "home loan eligibility"],
+});
 
 export default function EligibilityPage() {
   return (

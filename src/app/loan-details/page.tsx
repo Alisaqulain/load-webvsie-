@@ -4,12 +4,15 @@ import PageHeader from "@/components/PageHeader";
 import ContactCTA from "@/components/ContactCTA";
 import { LOAN_DETAILS } from "@/lib/data";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Loan Details | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Loan Details",
   description:
     "Detailed information on personal, business, home, LAP, vehicle, and gold loans — amounts, tenure, rates, and features.",
-};
+  path: "/loan-details",
+  keywords: ["loan details", "personal loan rates", "home loan tenure", "LAP loan India"],
+});
 
 export default function LoanDetailsPage() {
   return (

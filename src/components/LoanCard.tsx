@@ -88,7 +88,7 @@ export function SimpleLoanCard({ name, className = "" }: SimpleLoanCardProps) {
       href={`/apply?loan=${encodeURIComponent(name)}`}
       className={`hover-glow group flex items-center justify-between rounded-xl border border-navy-800/8 bg-white px-4 py-3.5 shadow-sm transition ${className}`}
     >
-      <span className="text-sm font-medium text-navy-900 group-hover:text-gold-700">
+      <span className="min-w-0 flex-1 text-sm font-medium text-navy-900 group-hover:text-gold-700">
         {name}
       </span>
       <ArrowUpRight className="h-4 w-4 text-silver-400 transition group-hover:text-gold-600" />

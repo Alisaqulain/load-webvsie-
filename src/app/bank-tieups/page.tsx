@@ -3,12 +3,15 @@ import PageHeader from "@/components/PageHeader";
 import BankTieups from "@/components/BankTieups";
 import ContactCTA from "@/components/ContactCTA";
 import { Building2, Shield, TrendingUp } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Bank Tie-ups | NR Innovative Solutions",
+export const metadata: Metadata = createPageMetadata({
+  title: "Bank Tie-ups",
   description:
     "NR Innovative Solutions partners with 159+ banks and NBFCs across India for competitive loan rates and higher approval rates.",
-};
+  path: "/bank-tieups",
+  keywords: ["bank tie-ups", "NBFC partners", "loan lenders India"],
+});
 
 const benefits = [
   {

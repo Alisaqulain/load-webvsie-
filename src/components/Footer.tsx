@@ -18,17 +18,17 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="overflow-hidden rounded-xl border border-gold-500/40 bg-white p-1">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="shrink-0 overflow-hidden rounded-xl border border-gold-500/40 bg-white p-1">
                 <Image
                   src="/logo.jpeg"
                   alt="NR Innovative Solutions Logo"
                   width={180}
                   height={56}
-                  className="h-12 w-[150px] object-contain"
+                  className="h-10 w-[120px] object-contain sm:h-12 sm:w-[150px]"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="font-display font-semibold text-white">{SITE_NAME}</p>
                 <p className="text-xs text-gold-500/80">&ldquo;{TAGLINE}&rdquo;</p>
               </div>

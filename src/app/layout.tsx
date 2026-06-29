@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import JsonLd from "@/components/JsonLd";
+import { organizationJsonLd, rootMetadata, websiteJsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -17,24 +19,13 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "NR Innovative Solutions | All Types of Loans Across India",
-  description:
-    "Get personal, business, housing, mortgage, gold, vehicle, education and commercial loans through NR Innovative Solutions with 159+ bank tie-ups across India.",
-  keywords: [
-    "loan consultancy India",
-    "personal loan",
-    "business loan",
-    "home loan",
-    "NR Innovative Solutions",
-    "bank tie-ups",
-  ],
-  openGraph: {
-    title: "NR Innovative Solutions | All Types of Loans Across India",
-    description:
-      "Get personal, business, housing, mortgage, gold, vehicle, education and commercial loans through NR Innovative Solutions with 159+ bank tie-ups across India.",
-    type: "website",
-  },
+export const metadata: Metadata = rootMetadata;
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#030712",
 };
 
 export default function RootLayout({
@@ -43,10 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen antialiased">
+    <html lang="en-IN" className={`${playfair.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen overflow-x-hidden antialiased">
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <Navbar />
-        <main>{children}</main>
+        <main className="pb-24 md:pb-0">{children}</main>
         <Footer />
         <FloatingCTA />
       </body>
