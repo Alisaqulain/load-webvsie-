@@ -119,7 +119,7 @@ export default function Footer() {
           <p className="text-center text-xs text-silver-500 sm:text-left">
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-silver-500">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-silver-500 sm:justify-end">
             <Link href="/apply" className="hover:text-gold-400">
               Apply for Loan
             </Link>
@@ -128,6 +128,9 @@ export default function Footer() {
             </Link>
             <Link href="/eligibility" className="hover:text-gold-400">
               Eligibility
+            </Link>
+            <Link href="/privacy-policy" className="hover:text-gold-400">
+              Privacy Policy
             </Link>
           </div>
         </div>
